@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'employees_microservice_app',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
