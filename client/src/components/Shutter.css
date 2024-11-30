@@ -1,0 +1,90 @@
+
+  .shutter-content{
+    padding: 15px;
+    background-color: white;
+    max-width: 15vw;
+  }
+
+  /* Основной стиль для шторки */
+.shutter-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    background-color: #ff0033; /* Красный фон */
+    border-radius: 16px;
+    max-width: 600px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрирование */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Стиль для текстовых полей */
+  input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #ff0033; /* Цвет границы при фокусе */
+  }
+  
+ 
+  .rounded-input {
+    width: 300px; /* Ширина поля */
+    height: 40px; /* Высота поля */
+    border: 1px solid #d1d1d1; /* Цвет границы */
+    border-radius: 25px; /* Полностью закругленные углы */
+    padding: 0 20px; /* Внутренние отступы */
+    font-size: 16px; /* Размер текста */
+    outline: none; /* Убираем стандартное выделение */
+    transition: border-color 0.3s ease; /* Плавный переход цвета границы */
+  }
+
+  /* Изменение цвета границы при фокусе */
+  
+
+  /* Пример стиля кнопки */
+
+  /* Эффект наведения для кнопки */
+  
+
+  .rounded-button {
+    width: 100%; /* Ширина кнопки */
+    height: 50px; /* Высота кнопки */
+    background-color: #FF0032E5; /* Красный фон */
+    border: none; /* Без границы */
+    border-radius: 25px; /* Закругленные углы */
+    color: rgb(255, 255, 255); /* Белый цвет текста */
+    font-size: 16px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Плавные эффекты */
+    
+    /* Тень для обычного состояния */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+  }
+  
+  /* Эффект наведения */
+  .rounded-button:hover {
+    background-color: #D50029; /* Более насыщенный красный цвет */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Более заметная тень при наведении */
+  }
+  
+  /* Эффект нажатия */
+  .rounded-button:active {
+    background-color: #A4001A; /* Темный красный цвет */
+    transform: scale(0.95); /* Уменьшение кнопки при клике */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Сильная тень при клике */
+  }
+  
+  
+  /* Эффект нажатия */
+  
