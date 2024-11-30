@@ -45,20 +45,8 @@ const Header: React.FC<HeaderProps> = ({ onToggleShutter }) => {
             </button>
 
            
-            {/* <div className={`shutter-content-header ${isOpen ? 'visible' : 'hidden'}`}>
-               <div></div>
-                <Shutter/>
-
-              
-            </div>
-          */}
             
           
-
-          {/* Кнопка шторки */}
-          <button className="header__icon" >
-            <img src={iconMore} alt="шторка" className="search-img" />
-          </button>
 
 
 
