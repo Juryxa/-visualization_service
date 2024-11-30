@@ -15,23 +15,33 @@ const Main = () => {
     };
     return (
         <div className='main-container'>
-<<<<<<< HEAD
-            <Header onToggleShutter={toggleShutter}/>
-            
-            {isShutterVisible && <Shutter />}
-           
-=======
-            <Header/>
 
-            <div className='main-content'>
-                 <PersonModal/>
-            <Shutter/>
-           </div>
+        <Header onToggleShutter={toggleShutter}/>
+        
+        {isShutterVisible && <Shutter />}
+       
 
-            
+        
 
->>>>>>> 683deda1d7e7abb4847444bfe53e97701a046a02
+        <div className='main-content'>
+
+        <Shutter/>
+       </div>
+
+
+
+
+        <PersonModal/>
+        <div className='accordion-aside-container'>
+            <AsideDecorate/>
+            <AccordionTree/>
         </div>
+
+    </div>
+
+            
+
+       
     );
 };
 
