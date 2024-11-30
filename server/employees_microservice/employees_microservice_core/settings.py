@@ -105,6 +105,7 @@ WSGI_APPLICATION = 'employees_microservice.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# ПОМЕНЯЙТЕ ИМЯ БД МОЛЮ
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  # Указываем, что используем PostgreSQL
