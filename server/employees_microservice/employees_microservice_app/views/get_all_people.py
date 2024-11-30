@@ -1,7 +1,34 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from ..models import Employees, Roles, Positions, Subdivisionteams, Subdivisiondetails, Subdivisions, Functionalblocks, Additionaloffices
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 
+@swagger_auto_schema(
+    method="get",
+    operation_summary="Получение доступных значений фильтров",
+    operation_description="Возвращает списки доступных значений для фильтрации сотрудников. Поддерживает города, роли, должности, уровни подразделений и функциональные блоки.",
+    responses={
+        200: openapi.Response(
+            description="Успешный ответ с доступными фильтрами",
+            examples={
+                "application/json": {
+                    "cities": ["Москва", "Санкт-Петербург", "Новосибирск"],
+                    "roles": ["Администратор", "Менеджер", "Разработчик"],
+                    "positions": ["Тестировщик", "Бэкенд-разработчик", "Дизайнер"],
+                    "subdivisions_1": ["Центральный офис", "Филиал в Оренбурге"],
+                    "functional_blocks": ["Розничный блок", "Корпоративный блок"],
+                    "subdivisions_2": ["Управление транзакционными продуктами"],
+                    "subdivisions_3": ["Команда 1", "Команда 2"],
+                    "subdivisions_4": ["Дополнительный офис 1", "Дополнительный офис 2"],
+                }
+            },
+        ),
+        500: openapi.Response(
+            description="Ошибка на стороне сервера",
+        ),
+    },
+)
 
 @api_view(["GET"])
 def get_filter_options(request):
