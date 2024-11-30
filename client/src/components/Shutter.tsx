@@ -1,18 +1,24 @@
-  import React, { useState } from 'react';
-  import './Shutter.css'; 
-  import { Link } from 'react-router-dom';
-  import { Box, FormControl, InputLabel, List, ListItemButton, ListItemText, MenuItem, Select, TextField } from '@mui/material';
+import React, {useState} from 'react';
+import './Shutter.css';
+import {FormControl, InputLabel, MenuItem, Select} from '@mui/material';
 
-  const Shutter = () => {
+const Shutter = () => {
 
       const [isOpen, setIsOpen] = useState(false);
 
 
+
     
     
       
     
       
+
+
+
+
+      const closeShutter = () => setIsOpen(false); // Функция для закрытия шторки
+
       const [selectedDepartment, setSelectedDepartments] = useState<string | null>(null);
       const [selectedFblock, setSelectedFblock] = useState<string | null>(null);
       const [selectedDepartments2, setSelectedDepartments2] = useState<string | null>(null);
@@ -20,12 +26,12 @@
       const [selectedDepartments4, setSelectedDepartments4] = useState<string | null>(null);
       const [selectedRole, setSelectedRole] = useState<string | null>(null);
       const [isFocused,setIsFocused]= useState<boolean>(false)
-    
-    
+
+
       return (
           <div>
               <div className='shutter-content'>
-                
+
         {/* Выбор подразделения */}
         <FormControl variant="outlined" sx={{ Width: 240, height: 40, borderRadius: '20px' }}>
   <InputLabel
@@ -42,7 +48,7 @@
         },
       }}
     >
-      Подразделение 
+      Подразделение
     </InputLabel>
     <Select
       value={selectedDepartment}
@@ -97,7 +103,7 @@
         },
       }}
     >
-    Функциональный блок 
+    Функциональный блок
     </InputLabel>
     <Select
       value={selectedFblock}
@@ -131,7 +137,7 @@
           </MenuItem>
           <MenuItem value="dep1">Корпоративный блок</MenuItem>
           <MenuItem value="dep2">Розничный блок</MenuItem>
-          
+
       </Select>
   </FormControl>
 
@@ -215,7 +221,7 @@
     <Select
       value={selectedDepartments3}
       onChange={(e) => setSelectedDepartments3(e.target.value)}
-      
+
       label="Подразделение 3" // Это необходимо для синхронизации с InputLabel
       sx={{
         height: '40px',
@@ -324,7 +330,7 @@
         },
       }}
     >
-      Роль 
+      Роль
     </InputLabel>
     <Select
       value={selectedRole}
@@ -371,24 +377,24 @@
 
 
 
-        
-      
-      
-                
-                
-    
-            
+
+
+
+
+
+
+
 
                 {/* Пример с TextField */}
                 <input type="text" className="rounded-input" placeholder="Должность" />
                 <input type="text" className="rounded-input" placeholder="Фамилия" />
                 <input type="text" className="rounded-input" placeholder="Имя" />
-                <input type="text" className="rounded-input" placeholder="Телефон" />           
+                <input type="text" className="rounded-input" placeholder="Телефон" />
     <input type="text" className="rounded-input" placeholder="Адрес" />
-                      
+
 
                 <button className="rounded-button">Применить</button>
-                
+
                 </div>
           </div>
       );
