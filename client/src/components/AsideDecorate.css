@@ -1,0 +1,19 @@
+.aside{
+    position: relative;
+    max-width: 150px;
+    min-width: 100px;
+    height: 70vh;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #FF0032;
+}
+.aside img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+@media screen and (max-width: 768px) {
+    .aside{
+        display: none;
+    }
+}

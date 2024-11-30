@@ -1,0 +1,52 @@
+.tree{
+    width: 70%;
+    margin: auto auto;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 10px 0;
+}
+
+.accordionItem {
+    margin: 15px 0;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.2);
+}
+
+.accordionButton {
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.red {
+    background-color: #FF0032;
+    color: white;
+}
+.red:hover{
+    background-color: #f30031;
+}
+
+.white {
+    background-color: white;
+    color: #FF0032;
+}
+.white:hover{
+    background-color: #f4f4f4;
+}
+
+.accordionContent {
+    margin-top: 5px;
+
+}
+
+.accordionContent .accordionContent .accordionButton{
+    color: #464646;
+    padding: 10px 35px;
+}
+
+.accordionContent > div {
+    margin-top: 5px;
+}

@@ -1,16 +1,12 @@
 import React from 'react';
 import './App.css';
-import Main from './Main';
-import {Route, Routes} from "react-router-dom";
-
+import Main from "./Main";
 
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-      <Route path="/" element={<Main/>}/>
-    </Routes>
+        <Main/>
     </div>
   );
 }
