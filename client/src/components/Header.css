@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     /* Цвет полосы */
+    padding: 10px 20px;
+    color: white;
+    width: 80vw;
+  }
+  
+  .header__logo {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  
+  .header__logo-img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .header__search {
+    display: flex;
+    align-items: center;
+    background-color: #ff0033;
+    border-radius: 20px;
+    padding: 5px 10px;
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .header__search-input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  .header__search-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__icon {
+    background: none;
+    border: none;
+    color: #ff0033;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
