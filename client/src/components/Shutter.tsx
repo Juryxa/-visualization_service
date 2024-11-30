@@ -8,10 +8,17 @@ const Shutter = () => {
 
 
 
+    
+    
+      
+    
+      
+
 
 
 
       const closeShutter = () => setIsOpen(false); // Функция для закрытия шторки
+
       const [selectedDepartment, setSelectedDepartments] = useState<string | null>(null);
       const [selectedFblock, setSelectedFblock] = useState<string | null>(null);
       const [selectedDepartments2, setSelectedDepartments2] = useState<string | null>(null);
@@ -81,7 +88,7 @@ const Shutter = () => {
 
 
         {/* Выбор функциональный блок*/}
-        <FormControl variant="outlined" sx={{    height: 40, borderRadius: '20px' }}>
+        <FormControl variant="outlined" sx={{  Width: 240,  height: 40, borderRadius: '20px' }}>
   <InputLabel
       shrink={selectedFblock !== ''} // Лейбл поднимется и исчезнет, если есть значение
       sx={{
@@ -380,7 +387,7 @@ const Shutter = () => {
 
                 {/* Пример с TextField */}
                 <input type="text" className="rounded-input" placeholder="Должность" />
-                <input type="text" className="rounded-input" placeholder="Фамилию" />
+                <input type="text" className="rounded-input" placeholder="Фамилия" />
                 <input type="text" className="rounded-input" placeholder="Имя" />
                 <input type="text" className="rounded-input" placeholder="Телефон" />
     <input type="text" className="rounded-input" placeholder="Адрес" />

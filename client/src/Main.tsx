@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import PersonModal from "./components/PersonModal";
 import './Main.css'
@@ -8,9 +8,21 @@ import Shutter from './components/Shutter';
 
 
 const Main = () => {
-    const subdivisions = ["Подразделение 1", "Подразделение 2", "Подразделение 3"];
+    // Состояние для управления видимостью шторки
+    const [isShutterVisible, setShutterVisible] = useState(false);
+
+    // Функция для переключения видимости шторки
+    const toggleShutter = () => {
+        setShutterVisible(prev => !prev);
+    };
     return (
         <div className='main-container'>
+
+            <Header onToggleShutter={toggleShutter}/>
+            
+            {isShutterVisible && <Shutter />}
+           
+
             <Header/>
 
             <div className='main-content'>
@@ -20,11 +32,13 @@ const Main = () => {
 
 
 
+
             <PersonModal/>
             <div className='accordion-aside-container'>
                 <AsideDecorate/>
                 <AccordionTree/>
             </div>
+
         </div>
     );
 };
