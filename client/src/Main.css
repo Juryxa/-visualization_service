@@ -1,13 +1,18 @@
 .main-container {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
     background-color: #ffffff;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
   }
 .accordion-aside-container{
     display: flex;
     justify-content: space-between;
     margin: 0 15px;
 }
+
+  .main-content{
+    display: flex;
+
+    flex-direction: column;
+  }
