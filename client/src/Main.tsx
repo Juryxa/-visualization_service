@@ -19,14 +19,20 @@ const Main = () => {
         <div className='main-container'>
 
         <Header onToggleShutter={toggleShutter}/>
-  
+        <div className='main-content'>
         <PersonModal/>
-        <div className='accordion-aside-coфntainer'>
+        <div className='accordion-aside-container'>
             <AsideDecorate/>
-            <AccordionTree/>
-            {isShutterVisible && <Shutter />}
-        </div>
 
+            <div className='main-accordiontree'>
+                <AccordionTree/>
+            </div>
+
+        </div>
+         {/* <div className='secondPart'>  */}
+        {isShutterVisible && <Shutter />}
+         {/* </div>  */}
+</div>
     </div>
 
             
