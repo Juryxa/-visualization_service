@@ -3,37 +3,70 @@
     align-items: center;
     justify-content: space-between;
      /* Цвет полосы */
-    padding: 10px 20px;
+    padding: 30px 20px;
     color: white;
-    width: 80vw;
+    width: 80%;
   }
-  
+  @media (max-width: 768px) {
+    .header {
+      width: 100%;
+    }
+  }
   .header__logo {
     display: flex;
     align-items: center;
     background-color: #ffffff;
+    max-width: 100%; 
+    height: auto;
   }
   
+ 
+  
+  /* Адаптивность для маленьких экранов */
+  @media (max-width: 768px) {
+    .header__logo {
+      display: none;
+    }
+  }
   .header__logo-img {
     height: 40px;
-    margin-right: 10px;
   }
   
   .header__search {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #ff0033;
-    border-radius: 20px;
-    padding: 5px 10px;
+    border-radius:0 40px 0 40px ; /* Закругляем только верхний левый и нижний правый углы */
+    padding: 15px 25px;
     flex-grow: 1;
     margin-left: 20px;
   }
   
+  
   .header__search-input {
-    border: none;
-    outline: none;
-    flex-grow: 1;
-    margin-right: 10px;
+    border: none; /* Убираем границу */
+    outline: none; /* Убираем стандартный фокус */
+    flex-grow: 1; /* Оставляем возможность растягиваться */
+    margin-right: 10px; /* Отступ справа */
+    padding: 8px; /* Внутренний отступ */
+    font-size: 14px; /* Уменьшаем размер текста */
+    color: red; /* Красный текст внутри */
+    background-color: #ff0033; /* Светлый фон */
+    border-radius: 4px; /* Скругленные углы */
+    transition: all 0.3s ease; /* Плавные изменения при фокусе */
+  }
+  
+  .header__search-input:focus {
+    color: rgb(255, 255, 255); /* Белый текст при фокусе */
+    background-color: #ffffff; /* Красный фон при фокусе */
+    color:red
+  }
+  .header__search-input::placeholder {
+    color: rgba(255, 255, 255, 1); /* Красный прозрачный текст placeholder */
+  }
+  .header__search-input:focus::placeholder {
+    color: rgba(255, 0, 0, 1); /* Красный прозрачный текст placeholder */
   }
   
   .header__search-icons {
@@ -47,6 +80,10 @@
     color: #ff0033;
     font-size: 16px;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 25px;
   }
   
+  .search-img{
+    width: 25px;
+    height: 25px;
+  }
