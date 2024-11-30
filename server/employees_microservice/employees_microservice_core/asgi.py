@@ -1,5 +1,5 @@
 """
-ASGI config for organization_structure_microservice project.
+ASGI config for employees_microservice project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'organization_structure_microservice.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'employees_microservice.settings')
 
 application = get_asgi_application()
