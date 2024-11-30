@@ -3,8 +3,27 @@
     padding: 15px;
     background-color: white;
     width: 20vw;
+    height: 100%;
   }
-
+  @media (max-width: 768px) {
+    .shutter-content{
+      
+      width: 50vw;
+      
+    }
+  }
+  @media (max-width:468px) {
+    .shutter-content {
+        position: fixed;
+        top: 5;
+        left: 0;
+        width:100%;
+        
+        background-color: rgba(0, 0, 0, 0.5);
+        
+        z-index: 1000; /* Поверх всех блоков */
+    }
+}
   /* Основной стиль для шторки */
 .shutter-content {
     display: flex;
@@ -19,7 +38,7 @@
   }
   
   /* Стиль для текстовых полей */
-  input[type="text"] {
+  .rounded-input {
     width: 100%;
     padding: 12px 16px;
     border: 1px solid #d1d1d1;
@@ -31,7 +50,7 @@
     transition: border-color 0.3s ease-in-out;
   }
   
-  input[type="text"]:focus {
+ .rounded-input:focus {
     border-color: #ff0033; /* Цвет границы при фокусе */
   }
   
