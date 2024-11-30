@@ -1,9 +1,10 @@
 import React from 'react';
 import Header from './components/Header';
+import './Main.css'
 
 const Main = () => {
     return (
-        <div>
+        <div className='main-container'>
             <Header/>
         </div>
     );
