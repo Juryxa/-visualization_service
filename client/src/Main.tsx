@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
+import PersonModal from "./components/PersonModal";
 import './Main.css'
 import Shutter from './components/Shutter';
 
@@ -14,10 +15,22 @@ const Main = () => {
     };
     return (
         <div className='main-container'>
+<<<<<<< HEAD
             <Header onToggleShutter={toggleShutter}/>
             
             {isShutterVisible && <Shutter />}
            
+=======
+            <Header/>
+
+            <div className='main-content'>
+                 <PersonModal/>
+            <Shutter/>
+           </div>
+
+            
+
+>>>>>>> 683deda1d7e7abb4847444bfe53e97701a046a02
         </div>
     );
 };
