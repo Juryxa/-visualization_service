@@ -7,9 +7,16 @@ import logo from '../images/icons/image.png';
 import iconSearch from '../images/icons/Vector.png';
 import iconMore from '../images/icons/Vector7.png'
 import iconClose from '../images/icons/iconClose.png'; // Добавьте иконку крестика
+import Shutter from './Shutter';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onToggleShutter: () => void;  // Тип пропса, который будет передавать функцию
+}
 
+const Header: React.FC<HeaderProps> = ({ onToggleShutter }) => {
+
+ 
+  
  
   
   return (
@@ -30,11 +37,19 @@ const Header: React.FC = () => {
           <button className="header__icon" >
             <img src={iconSearch} alt="лупа" className="search-img" />
           </button>
-          {/* Кнопка шторки */}
-          <button className="header__icon" >
-            <img src={iconMore} alt="шторка" className="search-img" />
-          </button>
-         
+          {/* Кнопка для открытия шторки */}
+          <button className="header__icon"  onClick={onToggleShutter}>
+                <img src={iconMore} alt="шторка" className="search-img" />
+            </button>
+
+           
+            {/* <div className={`shutter-content-header ${isOpen ? 'visible' : 'hidden'}`}>
+               <div></div>
+                <Shutter/>
+
+              
+            </div>
+          */}
             
           
         </div>

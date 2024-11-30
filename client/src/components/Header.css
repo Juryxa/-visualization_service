@@ -88,3 +88,28 @@
     height: 25px;
   }
 
+
+/* .shutter-content-header {
+  position: absolute;  
+  top: 15%; 
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff0033;
+  
+ 
+  transition: all 0.3s ease; 
+}
+
+.shutter-content-header.hidden {
+  display: none; 
+}
+
+.shutter-content-header.visible {
+  display: block; 
+}
+
+
+.shutter-inner-header {
+  padding: 20px;  
+
+} */
