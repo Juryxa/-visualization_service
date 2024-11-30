@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import PersonModal from "./components/PersonModal";
 import './Main.css'
+import AccordionTree from "./components/AccordionTree";
+import AsideDecorate from "./components/AsideDecorate";
 import Shutter from './components/Shutter';
 
 
@@ -15,22 +17,28 @@ const Main = () => {
     };
     return (
         <div className='main-container'>
-<<<<<<< HEAD
+
             <Header onToggleShutter={toggleShutter}/>
             
             {isShutterVisible && <Shutter />}
            
-=======
+
             <Header/>
 
             <div className='main-content'>
-                 <PersonModal/>
+
             <Shutter/>
            </div>
 
-            
 
->>>>>>> 683deda1d7e7abb4847444bfe53e97701a046a02
+
+
+            <PersonModal/>
+            <div className='accordion-aside-container'>
+                <AsideDecorate/>
+                <AccordionTree/>
+            </div>
+
         </div>
     );
 };
