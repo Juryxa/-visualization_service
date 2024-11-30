@@ -1,5 +1,13 @@
-*{
+@font-face {
+  font-family: "MTS";
+  src: url("font/MTSWide-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "MTS", sans-serif;
 }

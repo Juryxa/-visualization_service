@@ -1,0 +1,123 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: white;
+    margin: auto auto;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    max-height: 80vh; /* Ограничение по высоте */
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.FIO {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #FF0032;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: white;
+    padding: 10px 30px;
+}
+
+.criterias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.criteria {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Перенос элементов */
+    gap: 10px; /* Добавлен промежуток между строками при переносе */
+}
+
+.sectionBlack, .sectionWhite {
+    white-space: normal; /* Разрешить перенос текста */
+
+    overflow: hidden; /* Убираем переполнение текста */
+    text-align: left;
+    flex: 1; /* Делаем элементы гибкими по ширине */
+    min-width: 120px; /* Минимальная ширина, чтобы они не сжимались слишком сильно */
+}
+
+.sectionBlack {
+    font-weight: bold;
+    color: white;
+    background-color: #464646;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.sectionWhite {
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #FF0032;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+
+.form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.openButton {
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .criterias {
+        grid-template-columns: 1fr;
+    }
+    .sectionBlack, .sectionWhite{
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+    .FIO{
+        padding: 5px 15px;
+        margin-right: 5px;
+    }
+}

@@ -6,8 +6,8 @@ declare module "*.jpg";
 
 
 declare module 'react-slick' {
-    import { Component } from 'react';
-  
+    import {Component} from 'react';
+
     export interface SliderProps {
       dots?: boolean;
       infinite?: boolean;
@@ -25,7 +25,11 @@ declare module 'react-slick' {
       }>;
       [key: string]: any; // Позволяет передавать другие свойства
     }
-  
+
     export default class Slider extends Component<SliderProps> {}
   }
-  
+
+declare module '*.module.css' {
+    const classes: { [key: string]: string };
+    export default classes;
+}
