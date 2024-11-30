@@ -1,6 +1,13 @@
 .main-container {
     display: flex;
     justify-content: center; 
-    background-color: #ffffff; 
+    align-items: center;
+    background-color: #ffffff;
+    flex-direction: column;
   }
   
+  .main-content{
+    display: flex;
+    
+    flex-direction: column;
+  }
